@@ -12,7 +12,7 @@ Routine.new({
     2 play: ["electro/synth", 0] amp: 0.7 dur: 1 scale: \scriabin reverb: 0.3 off: 0.25 degree: 0 delay: 0.5;
     6 play: ["electro/bass", 0] dur: 4 degree: 3 off: 0.5;
 
-    707 i: \cr amp: 0.4 reverb: 0.2;
+    707 i: \cr amp: 0.4 dur: 0 reverb: 0.2;
 
     ~wait.(32);
 
