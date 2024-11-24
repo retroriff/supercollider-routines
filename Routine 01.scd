@@ -24,7 +24,7 @@ Routine.new({
     808 i: \oh dur: 0.25 fill: 1 weight: 0.82;
     Px blp: 0.2;
 
-    ~wait.(32);
+    ~wait.(32, "🟢 Second");
 
     2 play: ["fm", \rand] amp: 0.7 dur: 0.25 beat: ~beat seed: 12 degree: 12 length: 3 off: 0.5 scale: \minor delay: 0.2;
 

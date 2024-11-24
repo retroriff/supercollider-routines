@@ -22,7 +22,7 @@ Routine.new({
     1 set: 1 env: 0.2;
     707 i: \sn dur: 0.25 amp: [\exp, 0, 0.6, 16, 1];
 
-    ~wait.(16, "Second part");
+    ~wait.(16, "🟢 Second part");
 
     1 set: 1 ctf: [\exp, 0.4, 1, 16];
     3 i: \bd dur: 1;
@@ -59,7 +59,7 @@ Routine.new({
     Px root: 0;
     707 i: \cr amp: 0.2;
 
-    ~wait.(16);
+    ~wait.(16, "🟢 Third part");
 
     1 set: 1 env: [\lin, 0.9, 0.2, 16] solo: 1;
     707 i: \cr amp: 0.5 solo: 1;
@@ -71,7 +71,5 @@ Routine.new({
     "🔥 End".postln;
 }).play;
 );
-
-
 
 \4 i: \303 dur: Pseq([0.5, 1, 2, 4, 8], inf) sus: Pkey(\dur) ctf: Pwhite(0.1, 1) env: Pwhite(0.1, 1) res: Pwhite(0.1, 1) delay: 0.2 reverb: 0.2;
