@@ -50,6 +50,8 @@ Routine.new({
 
     3 set: 1 degree: 0;
 
+    Px.release;
+
     "🔥 End".postln;
 }).play;
 );
