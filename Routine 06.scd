@@ -38,6 +38,6 @@ Ns.set(\scale, \iwato)
 Ns.set(\wave, \saw)
 Ns.set(\env, 1)
 
-Nfx(\ns).gverb(0.5)
+Fx(\ns).gverb(0.5)
 
 \ns out: 30

@@ -20,7 +20,7 @@ r = Routine.new({
     // ~skip = true;
 
     Ns new: ~event play: 0;
-    Nfx new: \ns gverb: 0.3;
+    Fx new: \ns gverb: 0.3;
 
     ~wait.(32);
 
@@ -45,7 +45,7 @@ r = Routine.new({
     ~wait.(18);
 
     Ns.set(\octave, ~octave);
-    Nfx blp: 0.5;
+    Fx blp: 0.5;
 
     ~wait.(18);
 
