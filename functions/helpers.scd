@@ -11,9 +11,12 @@ var formatTimeMessage = { |seconds|
     "(" ++ minutes ++ "m " ++ remainingSeconds ++ "s)";
 };
 
-var postMessage = { |routineCount, seconds, message|
+var postMessage = { |routineCount, seconds, message, loopIndex|
     var countMessage = "💥" + routineCount ++ ":";
     var beatsString = totalBeats + "beats";
+
+    if (loopIndex.notNil)
+    { message = message ++ "," + (loopIndex + 1) };
 
     if (message.notNil)
     { countMessage = countMessage + message + "–" };
@@ -23,7 +26,7 @@ var postMessage = { |routineCount, seconds, message|
 
 ~skip = false;
 
-~wait = { |beats, message|
+~wait = { |beats, message, loopIndex|
     if (~skip == false) {
         var seconds = (beats / TempoClock.default.tempo).floor.asInteger;
 
@@ -31,7 +34,7 @@ var postMessage = { |routineCount, seconds, message|
         totalBeats = totalBeats + beats;
         totalSeconds = totalSeconds + seconds;
 
-        postMessage.(routineCount, seconds, message);
+        postMessage.(routineCount, seconds, message, loopIndex);
 
         beats.wait;
     };
