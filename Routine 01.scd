@@ -16,6 +16,7 @@ Routine.new({
 
     \808 i: \oh;
     \808 i: \ma;
+    808 i: \cy dur: 0;
 
     ~wait.(8);
 

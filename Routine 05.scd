@@ -17,24 +17,22 @@ Ns.loadSynth;
 r = Routine.new({
     "💿 Start".postln;
 
-    // ~skip = true;
-
-    Ns new: ~event play: 0;
+    Ns new: ~event play: 10;
     Fx new: \ns gverb: 0.3;
 
-    ~wait.(32);
+    ~wait.(36);
 
     Ns.set(\env, 1);
 
-    ~wait.(16);
+    ~wait.(18);
 
     Ns.set(\chord, [0, 1, 3]);
 
-    ~wait.(16);
+    ~wait.(18);
 
     Ns.set(\octave, 0);
 
-    ~wait.(16);
+    ~wait.(18);
 
     Ns.set(\octave, ~octave);
 
@@ -49,13 +47,10 @@ r = Routine.new({
 
     ~wait.(18);
 
-    Ns.set(\degree, [0, 1, 2, 3, 4, 5, 6].clipExtend(8).shuffle);
-
-    ~wait.(16);
-
-    Ns.set(\degree, [0, 1, 2, 3, 4, 5, 6].clipExtend(8).shuffle);
-
-    ~wait.(16);
+    2 do: { |i|
+        Ns.set(\degree, [0, 1, 2, 3, 4, 5, 6].clipExtend(9).shuffle);
+        ~wait.(18, "🟢 Degrees Loop", i);
+    };
 
     Ns.set(\degree, ~degree);
 
@@ -63,17 +58,12 @@ r = Routine.new({
 
     Ns.set(\degree, 1);
 
-    ~wait.(16);
+    ~wait.(18);
 
-    Ns.set(\chord, [0, 1, 5]);
-
-    ~wait.(8);
-
-    Ns.set(\chord, [2, 4, 6]);
-
-    ~wait.(8);
-
-    ~skip = false;
+    2 do: { |i|
+        Ns.set(\chord, 3.collect { rrand(0, 7) });
+        ~wait.(18, "🟢 Chords Loop", i);
+    };
 
     Ns.set(\chord, [2, 4, 6]);
 
@@ -87,7 +77,7 @@ r = Routine.new({
     Ns.set(\degree, ~degree);
     Ns.set(\wave, \triangle);
 
-    ~wait.(16);
+    ~wait.(18);
 
     Px release: \all;
 
