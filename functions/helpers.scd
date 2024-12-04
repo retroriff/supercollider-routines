@@ -42,6 +42,7 @@ var postMessage = { |routineCount, seconds, message, loopIndex|
 
 Fx.clear;
 
+"".postln;
 "⏩ To set the starting point:".postln;\;
 "1. At the beginning: ~skip = true;".postln;\;
 "2. At desired start point: ~skip = false;".postln;\;
