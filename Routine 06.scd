@@ -2,7 +2,7 @@
 "functions/helpers.scd".loadRelative;
 
 Px.clear;
-Px play: 5 reverb: 0.2 blp: 0.2;
+Px play: 5 reverb: 0.2 blp: 0.15;
 
 ~r1 = Routine({
     loop {
@@ -28,7 +28,9 @@ Px play: 5 reverb: 0.2 blp: 0.2;
 
     loop {
         var hihats = ["ch", "oh", "ss"].choose;
-        2 play: ["707/" ++ hihats, 0] dur: 0.25 amp: 0.4 beat: 1;
+        var seed = 500.rand;
+
+        2 play: ["707/" ++ hihats, 0] dur: 0.25 amp: 0.4 beat: 1 seed: seed;
         16.wait;
     };
 }).play;
@@ -40,6 +42,7 @@ Px play: 5 reverb: 0.2 blp: 0.2;
 
 ~r4 = Routine({
     16.wait;
+
     Sx play: 10 new: (\amp: 0.7, \dur: 0.25);
 
     loop {
