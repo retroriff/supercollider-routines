@@ -1,7 +1,7 @@
 (
 "functions/helpers.scd".loadRelative;
 
-Sx.loadSynth;
+Sx.clear;
 
 ~degree = [0, 1, 2, 3, 4, 5, 6].clipExtend(8).slide(3, 1).shuffle(938);
 ~octave = [0, 0, 0, 0, -1, -1, 0].clipExtend(8).slide(3, 1).shuffle(460);
