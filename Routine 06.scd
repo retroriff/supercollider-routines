@@ -10,14 +10,14 @@ Px play: 5 reverb: 0.2 blp: 0.15;
         var crash = [\cr, \lt, \mt, \oh].choose;
         var seed = 500.rand;
         var snare = [\cp, \sn].wchoose([0.2, 0.8]);
-        var snareWeight = (3..6).wchoose([0.2, 0.2, 0.2, 0.4]) / 10;
+        var snareWeight = (3..6).wchoose([0.1, 0.1, 0.3, 0.5]) / 10;
 
         1 play: ["electro/bass", \rand] dur: 0.25 beat: 1 seed: seed;
-        707 i: crash dur: 0 amp: 0.3;
+        707 i: crash dur: 0 amp: 0.6;
 
         12.wait;
 
-        707 i: snare amp: 0.6 dur: 0.25 beat: 1 weight: snareWeight seed: (seed + 1) in: 2;
+        707 i: snare amp: 0.8 dur: 0.25 beat: 1 weight: snareWeight seed: (seed + 1) in: 2;
 
         4.wait;
 

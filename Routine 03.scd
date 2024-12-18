@@ -17,7 +17,7 @@ Routine.new({
 
     ~wait.(12);
 
-    707 i: \sn dur: 0.25 beat: 1 amp: 0.6 weight: 0.6 seed: 101;
+    707 i: \sn dur: 0.25 beat: 1 weight: 0.6 seed: 101;
 
     ~wait.(4, "🟢 Two");
 
@@ -27,7 +27,7 @@ Routine.new({
 
     ~wait.(12);
 
-    707 i: \sn dur: 0.25 beat: 1 amp: 0.6 weight: 0.6 seed: 102;
+    707 i: \sn dur: 0.25 beat: 1 weight: 0.6 seed: 102;
 
     ~wait.(4, "🟢 Three Zap");
 
@@ -45,7 +45,7 @@ Routine.new({
 
     ~wait.(12);
 
-    707 i: \sn dur: 0.25 beat: 1 amp: 0.4 weight: 0.5 seed: 103;
+    707 i: \sn dur: 0.25 beat: 1 weight: 0.5 seed: 103;
 
     ~wait.(4, "🟢 Four");
 
@@ -61,7 +61,7 @@ Routine.new({
 
     ~wait.(12);
 
-    707 i: \sn dur: 0.25 beat: 1 amp: 0.6 weight: 0.6 seed: 104;
+    707 i: \sn dur: 0.25 beat: 1 weight: 0.6 seed: 104;
 
     ~wait.(4, "🟢 Five");
 
