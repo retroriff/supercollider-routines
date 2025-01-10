@@ -1,8 +1,6 @@
 (
 "functions/helpers.scd".loadRelative;
 
-Sx.clear;
-
 ~degree = [0, 1, 2, 3, 4, 5, 6].clipExtend(8).slide(3, 1).shuffle(938);
 ~octave = [0, 0, 0, 0, -1, -1, 0].clipExtend(8).slide(3, 1).shuffle(460);
 ~event = (
@@ -79,7 +77,7 @@ r = Routine.new({
 
     ~wait.(18);
 
-    Px release: \all;
+    Sx release: 10;
 
     "🔥 End".postln;
 }).play;

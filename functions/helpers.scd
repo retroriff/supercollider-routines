@@ -41,6 +41,8 @@ var postMessage = { |routineCount, seconds, message, loopIndex|
 };
 
 Fx.clear;
+Px.clear;
+Sx.clear;
 
 "".postln;
 "⏩ To set the starting point:".postln;\;

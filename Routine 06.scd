@@ -1,8 +1,6 @@
 (
 "functions/helpers.scd".loadRelative;
 
-Px.clear;
-Sx.clear;
 Px play: 5 reverb: 0.2 blp: 0.15;
 
 ~r1 = Routine({

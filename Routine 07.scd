@@ -1,8 +1,6 @@
 (
 "functions/helpers.scd".loadRelative;
 
-Px.clear;
-
 ~r1 = Routine({
     "💿 Start".postln;
 
