@@ -20,7 +20,7 @@ Routine.new({
     ~wait.(32);
 
     1 set: 1 env: 0.2;
-    707 i: \sn dur: 0.25 amp: [\exp, 0, 0.6, 16, 1];
+    707 i: \sd dur: 0.25 amp: [\exp, 0, 0.6, 16, 1];
 
     ~wait.(16, "🟢 Second part");
 
@@ -47,7 +47,7 @@ Routine.new({
 
     ~wait.(8);
 
-    707 i: \oh dur: 0.25 amp: [\exp, 0, 1, 16, 1];
+    707 i: \hh dur: 0.25 amp: [\exp, 0, 1, 16, 1];
 
     ~wait.(16);
 
