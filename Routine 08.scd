@@ -6,12 +6,14 @@
 ~r1 = Routine({
   "💿 Start".postln;
 
-  1 name: "marimba" chan: 10 dur: 0.25 degree: 0 amp: 1 degree: \rand scale: \minor length: 7 amp: 0.3 root: 1;
-  2 name: "xilofon" chan: 15 dur: 0.25 degree: 0 amp: 1 degree: \rand scale: \minor length: 7 amp: 1 root: 1;
-  3 name: "organ" chan: 14 dur: 0.25 degree: 0 amp: 1 degree: \rand scale: \minor length: 7 amp: 1 root: 1 in: 20;
-  4 i: \henon dur: 0.25 beat: 0.7 amp: 0.7 delay: 0.2 reverb: 0.4;
+  1 chan: 10 name: "marimba" dur: 0.25 amp: 0.4 degree: \rand scale: \minor length: 7 root: 4;
+  2 chan: 15 name: "xilofon" dur: 0.25 degree: \rand scale: \minor length: 7 root: 4;
+  3 chan: 14 name: "organ" dur: 0.25 degree: \rand scale: \minor length: 7 root: 4 in: 20;
+  4 chan: 6 name: "triangle" dur: 2 degree: 2 octave: 4 off: 1;
+  5 i: \henon dur: 0.25 beat: 0.7 amp: 0.5 delay: 0.2 reverb: 0.4 out: 20;
 
-  Dx.preset(\electro, 4).in.vol(0.2);
+  Dx.use("KorgKRZ");
+  Dx.preset(\electro, 4).vol(0.17);
 
   ~wait.(32);
 
