@@ -5,17 +5,17 @@ Px play: 5 reverb: 0.2 blp: 0.15;
 
 ~r1 = Routine({
     loop {
-        var crash = [\cr, \lt, \mt, \oh].choose;
+        var crash = [\cr, \lt, \mt, \hh].choose;
         var seed = 500.rand;
-        var snare = [\cp, \sn].wchoose([0.2, 0.8]);
+        var snare = [\cp, \sd].wchoose([0.2, 0.8]);
         var snareWeight = (3..6).wchoose([0.1, 0.1, 0.3, 0.5]) / 10;
 
-        1 play: ["electro/bass", \rand] dur: 0.25 beat: 1 seed: seed;
+        1 play: ["electro/bass", \rand] dur: 0.25 beat: 0.7 seed: seed;
         707 i: crash dur: 0 amp: 0.6;
 
         12.wait;
 
-        707 i: snare amp: 0.8 dur: 0.25 beat: 1 weight: snareWeight seed: (seed + 1) in: 2;
+        707 i: snare amp: 0.6 dur: 0.25 beat: snareWeight seed: (seed + 1) in: 2;
 
         4.wait;
 
@@ -30,14 +30,14 @@ Px play: 5 reverb: 0.2 blp: 0.15;
         var hihats = ["ch", "oh", "ss"].choose;
         var seed = 500.rand;
 
-        2 play: ["707/" ++ hihats, 0] dur: 0.25 amp: 0.4 beat: 1 seed: seed;
+        2 play: ["707/" ++ hihats, 0] dur: 0.25 amp: 0.4 beat: 0.7 seed: seed;
         16.wait;
     };
 }).play;
 
 ~r3 = Routine({
      16.wait;
-     909 i: \bd dur: 1;
+     909 i: \bd dur: 1 amp: 0.6;
 }).play;
 
 ~r4 = Routine({

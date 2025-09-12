@@ -5,8 +5,8 @@ Routine.new({
     "💿 Start".postln;
 
     707 i: \bd dur: 1 reverb: 0.2 delay: 0.1;
-    707 i: \sn dur: 2 off: 1 reverb: 0.2 delay: 0.1 amp: 0.5 human: 0.1;
-    707 i: \ch dur: 0.25 beat: 1 reverb: 0.2 delay: 0.1 amp: 0.3;
+    707 i: \sd dur: 2 off: 1 reverb: 0.2 delay: 0.1 amp: 0.5 human: 0.1;
+    707 i: \ch dur: 0.25 beat: 0.7 reverb: 0.2 delay: 0.1 amp: 0.3;
 
     1 play: ["electro/synth", \rand] amp: 0.5 dur: 0.75 length: 5 scale: \scriabin reverb: 0.3 off: 0.25 degree: 0 delay: 0.5 seed: 281;
     2 play: ["electro/synth", 0] amp: 0.6 dur: 1 scale: \scriabin reverb: 0.3 off: 0.25 degree: 0 delay: 0.5;
@@ -29,14 +29,14 @@ Routine.new({
 
     ~wait.(28);
 
-    808 i: \sn dur: 0.25 beat: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1] weight: 0.5 seed: 301 reverb: 0.2 delay: 0.1;
+    808 i: \sd dur: 0.25 beat: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1] weight: 0.5 seed: 301 reverb: 0.2 delay: 0.1;
 
     ~wait.(4);
 
-    \808 i: \sn;
-    6 play: ["electro/bass", 0] dur: 0.25 degree: \rand beat: 1 weight: 0.3 seed: 200;
+    \808 i: \sd;
+    6 play: ["electro/bass", 0] dur: 0.25 degree: \rand beat: 0.3 seed: 200;
 
-    808 i: \rs dur: 0.25 beat: 1 weight: 0.3 reverb: 0.5 seed: 628;
+    808 i: \rs dur: 0.25 beat: 0.3 reverb: 0.5 seed: 628;
 
     ~wait.(16);
 
