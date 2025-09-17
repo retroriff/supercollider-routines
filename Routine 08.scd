@@ -1,4 +1,4 @@
-// Requires orchestra MIDI instruments (Welcome to the Machine Orchestra.scd)
+// Requires orchestra MIDI instruments (Pulse Orchestra.scd)
 
 (
 "functions/helpers.scd".loadRelative;
@@ -6,16 +6,38 @@
 ~r1 = Routine({
   "💿 Start".postln;
 
-  1 chan: 10 name: "marimba" dur: 0.25 amp: 0.4 degree: \rand scale: \minor length: 7 root: 4;
-  2 chan: 15 name: "xilofon" dur: 0.25 degree: \rand scale: \minor length: 7 root: 4;
-  3 chan: 14 name: "organ" dur: 0.25 degree: \rand scale: \minor length: 7 root: 4 in: 20;
-  4 chan: 6 name: "triangle" dur: 2 degree: 2 octave: 4 off: 1;
-  5 i: \henon dur: 0.25 beat: 0.7 amp: 0.5 delay: 0.2 reverb: 0.4 out: 20;
+  1 chan: 0 name: "marimba" dur: 0.25 amp: 0.4 degree: \rand scale: \minor length: 3 root: 4 in: 20;
 
-  Dx.use("KorgKRZ");
-  Dx.preset(\electro, 4).vol(0.17);
+  ~wait.(16);
+
+  2 chan: 1 name: "xilofon" dur: 0.25 degree: \rand scale: \minor length: 3 root: 4 in: 20;
 
   ~wait.(32);
+
+  3 chan: 2 name: "organ" dur: 0.25 degree: \rand scale: \minor length: 7 root: 4 in: 20;
+
+  ~wait.(32);
+
+  4 chan: 3 name: "triangle" dur: 0.25 degree: \rand octave: 4 scale: \minor length: 5 in: 20;
+  5 chan: 4 name: "strings" hold: 1 degree: 2 octave: 3 in: 20;
+
+  ~wait.(128);
+
+  6 chan: 4 name: "strings" dur: Prand([1, 2], inf) degree: \rand scale: \minor length: 8 octave: 4 root: 4 pan: \rand solo: 1;
+
+  ~wait.(32);
+
+  6 chan: 4 name: "strings" dur: Prand([1, 2], inf) degree: \rand scale: \minor length: 8 octave: 4 root: 4 pan: \rand;
+  \6 chan: 4 name: "strings";
+
+  ~wait.(32);
+
+  6 chan: 4 set: 1 out: 20;
+
+}).play;
+
+~r2 = Routine({
+  ~wait.(32 * 3);
 
   loop {
     Px.shuffle;
