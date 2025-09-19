@@ -62,7 +62,7 @@ Routine.new({
     ~wait.(16, "🟢 Third part");
 
     1 set: 1 env: [\lin, 0.9, 0.2, 16] solo: 1;
-    707 i: \cr amp: 0.7 dur: 0 solo: 1;
+    707 i: \cr amp: 0.7 dur: 0;
 
     ~wait.(16);
 
