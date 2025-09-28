@@ -23,24 +23,19 @@
 
   ~wait.(128);
 
-  6 chan: 4 name: "strings" dur: Prand([1, 2], inf) degree: \rand scale: \minor length: 8 octave: 4 root: 4 pan: \rand solo: 1;
+  Px.solo(5);
 
   ~wait.(32);
 
-  6 chan: 4 name: "strings" dur: Prand([1, 2], inf) degree: \rand scale: \minor length: 8 octave: 4 root: 4 pan: \rand;
-  \6 chan: 4 name: "strings";
-
-  ~wait.(32);
-
-  6 chan: 4 set: 1 out: 20;
-
+  1 chan: 0 name: "marimba" dur: 0.25 amp: 0.4 degree: \rand scale: \minor length: 3 root: 4 in: 20;
 }).play;
 
 ~r2 = Routine({
   ~wait.(32 * 3);
 
   loop {
-    Px.shuffle;
+    r = (r ? 0 % 3) + 1;
+    Px.shuffle(r);
     32.wait;
   };
 }).play;
@@ -48,8 +43,9 @@
 
 (
 ~scale = Scale.names.choose.asSymbol;
-~scale.postln;
+Px.shuffle;
 1 set: 1 scale: ~scale;
 2 set: 1 scale: ~scale;
 3 set: 1 scale: ~scale;
+~scale.debug("Scale:");
 )

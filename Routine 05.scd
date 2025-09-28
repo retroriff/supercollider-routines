@@ -67,11 +67,11 @@ r = Routine.new({
 
     ~wait.(14);
 
-    1 loop: ["electro/sweep", 1] dur: 4 amp: 0.4 r: -1;
+    1 loop: "electro/sweep:1" dur: 4 amp: 0.4 r: -1;
 
     ~wait.(4, "🟢 Second Part");
 
-    \1 loop: ["electro/sweep", 1];
+    \1 loop: "electro/sweep:1";
     Sx.set(\degree, ~degree);
     Sx.set(\wave, \triangle);
 
