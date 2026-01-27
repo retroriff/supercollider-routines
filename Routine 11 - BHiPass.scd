@@ -3,9 +3,10 @@
 ~eKey = 52;
 
 Ndef(\seq, {
-  var intervals, note, sig, trig, env;
+  var intervals, note, octaves, sig, trig, env;
 
-  intervals = ~iwatoIntervals + ~eKey - (\octave.kr(1) * 12);
+  octaves = 36 - (\octave.kr(1) * 12);
+  intervals = ~iwatoIntervals + ~eKey - octaves;
 
   trig = Impulse.kr(t * 4);
 
@@ -25,7 +26,7 @@ Ndef(\seq, {
   ).tanh;
 
   sig * env * \amp.kr(0.2);
-}).play;
+});
 )
 
 (
@@ -36,12 +37,12 @@ Ndef(\seq, {
 
   ~playPad.(~iwatoIntervals + ~eKey);
   \seq.in(16);
-  909 i: \bd dur: 1 amp: 0.8 in: 16;
+  909 i: \bd dur: 1 amp: 1 in: 16;
   909 i: \sd dur: 0.25 amp: Pwrand([0, 0.3], [0.8, 0.2], inf) in: 16;
 
   ~wait.(16);
 
-  909 i: \oh dur: 0.25 amp: Pwrand([0, 0.3], [0.8, 0.2], inf) in: 16;
+   909 i: \oh dur: 0.25 amp: Pwrand([0, 0.3], [0.8, 0.2], inf) in: 16;
 
   ~wait.(16);
 

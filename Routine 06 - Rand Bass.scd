@@ -37,7 +37,7 @@ Px play: 5 reverb: 0.2 blp: 0.15;
 
 ~r3 = Routine({
      16.wait;
-     909 i: \bd dur: 1 amp: 0.6;
+     909 i: \bd dur: 1 amp: 1;
 }).play;
 
 ~r4 = Routine({

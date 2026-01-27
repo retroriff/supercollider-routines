@@ -14,7 +14,7 @@ Routine.new({
 
   ~wait.(4);
 
-  909 i: \bd dur: 1 amp: 0.5;
+  909 i: \bd dur: 1 amp: 1;
   909 i: \sd dur: 2 amp: 0.5 off: 1 delay: 0.2;
   909 i: \ch dur: 0.25 beat: 0.6 amp: 0.5;
   909 i: \cr amp: 0.5;

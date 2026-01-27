@@ -6,7 +6,7 @@ Routine.new({
 
     707 i: \bd dur: 1 reverb: 0.2 delay: 0.1;
     707 i: \sd dur: 2 off: 1 reverb: 0.2 delay: 0.1 amp: 0.5 human: 0.1;
-    707 i: \ch dur: 0.25 beat: 0.7 reverb: 0.2 delay: 0.1 amp: 0.3;
+    707 i: \hh dur: 0.25 beat: 0.7 reverb: 0.2 delay: 0.1 amp: 0.3;
 
     1 play: ["electro/synth", \rand] amp: 0.5 dur: 0.75 length: 5 scale: \scriabin reverb: 0.3 off: 0.25 degree: 0 delay: 0.5 seed: 281;
     2 play: "electro/synth" amp: 0.6 dur: 1 scale: \scriabin reverb: 0.3 off: 0.25 degree: 0 delay: 0.5;
@@ -16,7 +16,7 @@ Routine.new({
 
     ~wait.(32);
 
-    3 play: "electro/synth:3" amp: 0.6 dur: 0.75 length: 5 seed: 180 scale: \scriabin reverb: 0.3 degree: [0, 3].stutter(16);
+    3 play: "electro/synth:3" amp: 0.6 dur: 0.75 length: 5 seed: 180 scale: \scriabin reverb: 0.3 degree: [0, 3].stutter(16).pseq;
 
     ~wait.(16);
 
@@ -44,7 +44,7 @@ Routine.new({
 
     ~wait.(16);
 
-    3 set: 1 degree: [0, 3].stutter(16);
+    3 set: 1 degree: [0, 3].stutter(16).pseq;
 
     ~wait.(16);
 

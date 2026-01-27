@@ -15,7 +15,7 @@ Routine.new({
     ~wait.(16);
 
     1 set: 1 env: [\lin, 0.9, 0.2, 16] res: 0;
-    2 i: \303 dur: 0.25 amp: 0.4 octave: ~octave degree: [0, 1, 5, 3] scale: \scriabin in: 16;
+    2 i: \303 dur: 0.25 amp: 0.4 octave: ~octave degree: [0, 1, 5, 3].pseq scale: \scriabin in: 16;
 
     ~wait.(32);
 
@@ -29,21 +29,21 @@ Routine.new({
     707 i: \cr amp: 0.7;
 
     ~wait.(16);
-
+*--
     1 set: 1 ctf: 1;
-    2 set: 1 degree: [0, 1, 2, 3];
+    2 set: 1 degree: [0, 1, 2, 3].pseq;
 
     ~wait.(8);
 
-    2 set: 1 degree: [0, 1, 5, 3];
+    2 set: 1 degree: [0, 1, 5, 3].pseq;
 
     ~wait.(8);
 
-    2 set: 1 degree: [0, 1, 2, 3];
+    2 set: 1 degree: [0, 1, 2, 3].pseq;
 
     ~wait.(8);
 
-    2 set: 1 degree: [0, 1, 5, 3];
+    2 set: 1 degree: [0, 1, 5, 3].pseq;
 
     ~wait.(8);
 
