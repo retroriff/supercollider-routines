@@ -43,8 +43,11 @@ Routine.new({
   ~wait.(64);
 
   ~r1.stop;
+
   Fx(i).vst(0.6);
+
   ~wait.(1);
+
   Fx(i).vstReadProgram;
 
   "🔥 End".postln;

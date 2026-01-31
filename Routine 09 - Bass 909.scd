@@ -16,24 +16,15 @@ Routine.new({
 
   909 i: \bd dur: 1 amp: 1;
   909 i: \sd dur: 2 amp: 0.5 off: 1 delay: 0.2;
-  909 i: \ch dur: 0.25 beat: 0.6 amp: 0.5;
+  909 i: \hh dur: 0.25 beat: 0.6 amp: 0.5;
   909 i: \cr amp: 0.5;
 
   ~wait.(64);
 
+  909 i: \sd amp: 0.3 dur: 0.25 beat: 0.6 seed: \rand;
   // 1 set: 1 beat: 1;
 
   "🔥 End".postln;
 }).play;
-
-~r2 = Routine.new({
-  909 i: \sd amp: 0.3 dur: 0.25 beat: 0.6 gui: 1;
-
-  loop {
-    Px.shuffle;
-    ~wait.(4);
-  }
-});
 );
 
-~r2.play;

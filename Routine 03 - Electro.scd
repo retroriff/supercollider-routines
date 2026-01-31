@@ -7,7 +7,7 @@
 Routine.new({
     "💿 Start".postln;
 
-    TR08.preset(\electro, 1).vol(1);
+    TR08.preset(\electro, 1).vol(0.4);
     1 play: ["electro/bass", ~buf] amp: 0.7 dur: 0.25 beat: 0.7 degree: \rand length: 5 seed: 755 scale: \scriabin;
     707 i: \cr amp: 0.6 dur: 0;
 

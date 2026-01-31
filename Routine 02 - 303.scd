@@ -29,7 +29,7 @@ Routine.new({
     707 i: \cr amp: 0.7;
 
     ~wait.(16);
-*--
+
     1 set: 1 ctf: 1;
     2 set: 1 degree: [0, 1, 2, 3].pseq;
 
