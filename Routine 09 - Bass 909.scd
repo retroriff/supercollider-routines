@@ -8,7 +8,7 @@ Routine.new({
 
   1 play: ["electro/bass", ~buf] amp: 0.5 dur: 0.25 beat: 0.7 degree: 8 seed: 949;
 
-  ~wait.(16);
+  ~wait.(8);
 
   909 i: \sd amp: 0.5 dur: 0.25 beat: 0.6;
 
@@ -27,4 +27,3 @@ Routine.new({
   "🔥 End".postln;
 }).play;
 );
-

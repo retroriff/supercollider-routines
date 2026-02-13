@@ -8,7 +8,7 @@
 
   loop {
     Px.release(20, i);
-    i = if (i < 2, i + 1 , 1);
+    i = if (i < 2, i + 1, 1);
     i play: ["fm", \rand] amp: 0.6 seed: \rand in: 20;
     Fx(i).space(0.9, inf);
     ~wait.(32);

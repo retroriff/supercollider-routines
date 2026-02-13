@@ -1,4 +1,4 @@
-// Requires orchestra MIDI instruments (Pulse Orchestra.scd)
+// Requires orchestra MIDI instruments (Percussion Orchestra.scd)
 
 (
 "functions/helpers.scd".loadRelative;
@@ -19,7 +19,7 @@
   ~wait.(32);
 
   4 chan: 3 name: "triangle" dur: 0.25 degree: \rand octave: 4 scale: \minor length: 5 in: 20;
-  5 chan: 4 name: "strings" hold: 1 degree: 2 octave: 3 in: 20;
+  5 chan: 4 name: "strings" amp: 1 hold: 1 degree: 2 octave: 3 in: 20;
 
   ~wait.(128);
 

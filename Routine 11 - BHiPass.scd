@@ -1,6 +1,6 @@
 (
-~iwatoIntervals = [0, 1, 5, 6, 10];
-~eKey = 52;
+~iwatoIntervals = Scale.iwato.degrees;
+~eKey = Nx.set(\E).root;
 
 Ndef(\seq, {
   var intervals, note, octaves, sig, trig, env;
@@ -42,7 +42,7 @@ Ndef(\seq, {
 
   ~wait.(16);
 
-   909 i: \oh dur: 0.25 amp: Pwrand([0, 0.3], [0.8, 0.2], inf) in: 16;
+  909 i: \oh dur: 0.25 amp: Pwrand([0, 0.3], [0.8, 0.2], inf) in: 16;
 
   ~wait.(16);
 

@@ -8,10 +8,10 @@ Px play: 5 reverb: 0.2 blp: 0.15;
     var crash = [\cr, \lt, \mt, \hh].choose;
     var seed = 500.rand;
     var snare = [\cp, \sd].wchoose([0.2, 0.8]);
-    var snareWeight = (3..6).wchoose([0.1, 0.1, 0.3, 0.5]) / 10;
+    var snareWeight = (3..6).wchoose([0.4, 0.5, 0.6, 0.7]) / 10;
 
     1 play: ["electro/bass", \rand] dur: 0.25 beat: 0.7 seed: seed;
-    707 i: crash dur: 0 amp: 0.3;
+    707 i: crash amp: 0.3;
 
     12.wait;
 
@@ -44,7 +44,7 @@ Px play: 5 reverb: 0.2 blp: 0.15;
   12.wait;
 
   Sx((
-    \amp: 0.5,
+    \amp: 0.8,
     \atk: 5,
     \chord: [0, 2, 3]
   )).play(4);
@@ -52,7 +52,7 @@ Px play: 5 reverb: 0.2 blp: 0.15;
   4.wait;
 
   loop {
-    var wave = [\pulse, \saw, \sine, \triangle].choose;
+    var wave = [\pulse, \saw, \sine, \tri].choose;
     var chord = (0..7).scramble.keep(3);
 
     Sx.qset(\chord, chord);

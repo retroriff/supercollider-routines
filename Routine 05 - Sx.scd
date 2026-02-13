@@ -73,7 +73,7 @@ r = Routine.new({
 
     \1 loop: "electro/sweep:1";
     Sx.set(\degree, ~degree);
-    Sx.set(\wave, \triangle);
+    Sx.set(\wave, \tri);
 
     ~wait.(18);
 
